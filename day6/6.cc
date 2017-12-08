@@ -15,7 +15,10 @@ int get_first_max_index(std::vector<int> banks, int max);
 int main()
 {
     std::fstream inputfile;
-    inputfile.open("./input.txt");
+    std::string filename;
+    std::cout << "Please input the file to test: ";
+    std::cin >> filename;
+    inputfile.open(filename);
 
     get_mem_bank_configs(inputfile);
 }
